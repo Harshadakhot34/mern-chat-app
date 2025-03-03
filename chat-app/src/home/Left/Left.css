@@ -19,12 +19,16 @@
   text-align: center;
   font-size: 20px;
 }
+.User_box::-webkit-scrollbar {
+  display: none;
+}
 
 .User_box {
-  height: 490px; /* Adjust height as needed */
+  height: 490px;
   overflow-y: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
   padding: 1rem;
-  background-color: #222;
   scrollbar-width: thin;
   scrollbar-color: #888 #333;
 }
@@ -38,4 +42,8 @@
 .user_message {
   display: flex;
   flex-direction: column;
+}
+
+.br_line {
+  color: aliceblue;
 }

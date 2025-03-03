@@ -1,26 +1,19 @@
 import React from "react";
-import "./Left.css";
+import "./Right.css";
 import image from "../../assets/Image/image.png";
-const Users = () => {
+
+const ChatUser = () => {
   return (
-    <>
-      <div className="User_container">
-        <h1 className="User_text">Message</h1>
-      </div>
-      <div className="User_box">
+    <div>
+      <div className="userChat_title">
         <UserAvatar imageUrl={image} isOnline={true} username="John Doe" />
-        <UserAvatar imageUrl={image} isOnline={false} username="Jane Smith" />
-        <UserAvatar imageUrl={image} isOnline={false} username="Jane Smith" />
-        <UserAvatar imageUrl={image} isOnline={false} username="Jane Smith" />
-        <UserAvatar imageUrl={image} isOnline={false} username="Jane Smith" />
+        {/* <UserAvatar imageUrl={image} isOnline={false} username="Jane Smith" /> */}
       </div>
-    </>
+    </div>
   );
 };
 
-export default Users;
-
-// /components/UserAvatar.js
+export default ChatUser;
 
 import { FaCircle } from "react-icons/fa";
 
