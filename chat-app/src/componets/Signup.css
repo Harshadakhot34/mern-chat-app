@@ -1,0 +1,92 @@
+/* body {
+  background-color: #2d3748;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+} */
+
+/* Centered container for the form */
+.Signup_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+/* Form styling */
+.Signup_box {
+  background-color: #2d3748;
+  border: 1px solid #e2e8f0;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Headers */
+.headline {
+  color: #fff;
+  text-align: center;
+  font-weight: 200;
+}
+
+.headline2 {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px !important;
+}
+
+/* Input fields styling */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  background-color: #2d3748;
+  border: 1px solid #a0aec0 !important;
+  /* padding: 15px; */
+  width: 100%;
+  border-radius: 4px;
+  color: #fff;
+  margin-bottom: 0.2rem;
+}
+
+/* Placeholder text color */
+input::placeholder {
+  color: #a0aec0 !important;
+  font-weight: 200;
+  font-size: 13px;
+}
+
+.bottom-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.btn-primary:hover {
+  background-color: #718096;
+}
+
+/* Login text */
+p {
+  color: #a0aec0;
+  text-align: center;
+}
+
+.login-text {
+  color: rgb(81, 172, 224);
+  text-decoration: underline;
+}
+
+.error_message{
+  color: red;
+  display: flex;
+  justify-content: flex-end;
+}
