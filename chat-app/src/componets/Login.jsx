@@ -6,7 +6,7 @@ import { useAuth } from "../context/AuthProvider";
 import { Link } from "react-router-dom";
 
 const Login = () => {
-    const [authUser, setAuthUser] = useAuth();
+  const [authUser, setAuthUser] = useAuth();
 
   const {
     register,
@@ -16,13 +16,17 @@ const Login = () => {
 
   const onSubmit = async (data) => {
     const userInfo = {
-          // fullname: data.fullname,
+      // fullname: data.fullname,
       email: data.email,
       password: data.password,
     };
     console.log(userInfo);
+
+  
     await axios
-      .post("http://localhost:5000/user/login", userInfo)
+      .post("http://localhost:5000/user/login", userInfo,  {
+          withCredentials: true // important to allow cookies to be sent
+        })
       .then((response) => {
         if (response.data) {
           alert("login successful");
@@ -58,9 +62,8 @@ const Login = () => {
               aria-describedby="emailHelp"
               placeholder="email"
               {...register("email", { required: true })}
-
             />
-              {errors.email && (
+            {errors.email && (
               <span className="error_message">This field is required</span>
             )}
           </div>
@@ -71,16 +74,19 @@ const Login = () => {
               id="exampleInputPassword1"
               placeholder="password"
               {...register("password", { required: true })}
-
             />
-             {errors.password && (
+            {errors.password && (
               <span className="error_message">This field is required</span>
             )}
           </div>
 
           <div className="bottom-content">
             <p>
-              New user? <Link  to="/signup" className="login-text"> Signup</Link>
+              New user?{" "}
+              <Link to="/signup" className="login-text">
+                {" "}
+                Signup
+              </Link>
             </p>
             <button type="submit" class="btn btn-success" value={Login}>
               Submit

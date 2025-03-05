@@ -32,7 +32,9 @@ const Signup = () => {
     };
     console.log(userInfo);
     await axios
-      .post("http://localhost:5000/user/signup", userInfo)
+      .post("http://localhost:5000/user/signup", userInfo,  {
+        withCredentials: true // important to allow cookies to be sent
+      })
       .then((response) => {
         if (response.data) {
           alert("Signup successful");
